@@ -1,16 +1,16 @@
 package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
 
-import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.services.OrderObserver;
-import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.services.OrderService;
+import java.util.List;
 
-public class Restaurant implements OrderObserver {
+public class Restaurant {
+    private List<Meal> menu = new MealDatabase().getMeals();
 
-    private OrderService orderService = OrderService.getOrderService();
-
-
-
-    @Override
-    public void orderUpdate(Order order) {
-
+    public boolean checkIfMealExist(String mealName){
+        for (Meal meal : menu) {
+            if (mealName.toLowerCase().equals(meal.getName().toLowerCase())){
+                return true;
+            }
+        }
+        return false;
     }
 }

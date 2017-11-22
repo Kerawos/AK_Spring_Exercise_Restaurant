@@ -37,23 +37,23 @@ public class OrderService {
         }
     }
 
-    public void makeOrder(Order order){
-        Runnable orderToMake = new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    TimeUnit.SECONDS.sleep(order.getOrderTime());
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-        cook.execute(orderToMake);
-    }
+//    public void makeOrder(Order order){
+//        Runnable orderToMake = new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    TimeUnit.SECONDS.sleep(order.getOrderTime());
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        };
+//        cook.execute(orderToMake);
+//    }
 
-    public boolean isOrderNotComplicated(Order order){
-        return order.getOrderTime() > 10 ? false : true;
-    }
+//    public boolean isOrderNotComplicated(Order order){
+//        return order.getOrderTime() > 10 ? false : true;
+//    }
 
 
 

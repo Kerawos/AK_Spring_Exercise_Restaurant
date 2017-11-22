@@ -1,24 +1,18 @@
 package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
 
+import java.util.List;
+
 public class Order {
 
-    private Meal meal;
     private String orderOwner;
-    private int orderTime;
+    private List<Meal> mealList;
 
-    public Order(Meal meal, String orderOwner) {
-        this.meal = meal;
+    public Order() {
+    }
+
+    public Order(String orderOwner, List<Meal> mealList) {
         this.orderOwner = orderOwner;
-        updateOrderTime();
-    }
-
-    public Meal getMeal() {
-        return meal;
-    }
-
-    public void setMeal(Meal meal) {
-        this.meal = meal;
-        updateOrderTime();
+        this.mealList = mealList;
     }
 
     public String getOrderOwner() {
@@ -29,12 +23,12 @@ public class Order {
         this.orderOwner = orderOwner;
     }
 
-    public int getOrderTime() {
-        return orderTime;
+    public List<Meal> getMealList() {
+        return mealList;
     }
 
-    private void updateOrderTime(){
-        this.orderTime = meal.getName().length();
+    public void setMealList(List<Meal> mealList) {
+        this.mealList = mealList;
     }
 
 }
