@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+</head>
+<body bgcolor="#99CC66">
+    <center>
+        <form method="post" th:action="@{/order}" th:object="${userRequest}" >
+            <input type="text" th:field="*{name}">
+            <input type="text" th:field="*{mealName}">
+            <input type="submit" th:value="Order and wait">
+        </form>
+        <p th:if="${message}!=null" th:text="${message}"></p>
+    </center>
+</body>
+</html>
