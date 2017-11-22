@@ -3,10 +3,9 @@ package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.dao.Order;
+import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.dao.OrderR;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -28,7 +27,7 @@ public class RestaurantTest {
         assertTrue(restaurant.checkIfMealExist("Pizza"));
         assertFalse(restaurant.checkIfMealExist("Pierogi"));
         assertEquals(restaurant.getMeal("Kluski").toString(), new Meal("Kluski", 9).toString());
-        Order orderTest = new Order();
+        OrderR orderTest = new OrderR();
         orderTest.setOrderOwner("User");
         List<Meal> mealList = new ArrayList<>();
         mealList.add(restaurant.getMenu().get(0));
