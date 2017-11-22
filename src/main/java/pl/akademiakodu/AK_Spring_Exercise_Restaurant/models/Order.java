@@ -1,5 +1,6 @@
 package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
@@ -8,6 +9,7 @@ public class Order {
     private List<Meal> mealList;
 
     public Order() {
+        mealList = new ArrayList<>();
     }
 
     public Order(String orderOwner, List<Meal> mealList) {
@@ -30,5 +32,8 @@ public class Order {
     public void setMealList(List<Meal> mealList) {
         this.mealList = mealList;
     }
+
+
+
 
 }

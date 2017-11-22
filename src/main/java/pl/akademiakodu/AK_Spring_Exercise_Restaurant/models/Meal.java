@@ -31,6 +31,6 @@ public class Meal {
 
     @Override
     public String toString() {
-        return name + "; ";
+        return getName() + "($" + getPrice() + ")";
     }
 }

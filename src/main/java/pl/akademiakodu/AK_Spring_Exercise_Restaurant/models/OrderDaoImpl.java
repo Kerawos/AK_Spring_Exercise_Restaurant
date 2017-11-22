@@ -5,7 +5,7 @@ import java.util.List;
 
 public class OrderDaoImpl implements OrderDao {
 
-    List<Order> orderList;
+    private List<Order> orderList;
 
     public OrderDaoImpl() {
         orderList = new ArrayList<>();
@@ -13,21 +13,50 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public List<Order> getAllOrders() {
-        return null;
+        return orderList;
     }
 
     @Override
-    public void addMeal(Meal meal) {
-
-    }
-
-    @Override
-    public void removeOrder(Meal meal) {
-
-    }
-
-    @Override
-    public void placeOrder(Order order) {
+    public void addOrder(Order order) {
         orderList.add(order);
+    }
+
+    @Override
+    public void removeOrder(Order order) {
+        for (Order order1 : orderList) {
+            if (order1.equals(order)){
+                orderList.remove(order);
+                break;
+            }
+        }
+    }
+
+    @Override
+    public void addMealToOrder(Order order, Meal meal) {
+        List<Meal> ourMeals = order.getMealList();
+        ourMeals.add(meal);
+        order.setMealList(ourMeals);
+    }
+
+    @Override
+    public void removeMealFromOrder(Order order, Meal meal) {
+        List<Meal> ourMeals = order.getMealList();
+        for (Meal ourMeal : ourMeals) {
+            if (meal.equals(ourMeal)){
+                ourMeals.remove(ourMeal);
+                break;
+            }
+        }
+        order.setMealList(ourMeals);
+    }
+
+    @Override
+    public boolean checkIfMealAppearInOurOrder(Order order, Meal meal){
+        for (Meal meal1 : order.getMealList()) {
+            if (meal1.equals(meal)){
+                return true;
+            }
+        }
+        return false;
     }
 }
