@@ -1,18 +1,20 @@
-package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
+package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.dao;
+
+import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.Meal;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Order {
+public class OrderR {
 
     private String orderOwner;
     private List<Meal> mealList;
 
-    public Order() {
+    public OrderR() {
         mealList = new ArrayList<>();
     }
 
-    public Order(String orderOwner, List<Meal> mealList) {
+    public OrderR(String orderOwner, List<Meal> mealList) {
         this.orderOwner = orderOwner;
         this.mealList = mealList;
     }

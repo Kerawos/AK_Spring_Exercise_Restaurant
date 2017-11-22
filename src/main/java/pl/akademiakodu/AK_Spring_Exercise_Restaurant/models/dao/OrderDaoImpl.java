@@ -1,29 +1,31 @@
-package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
+package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.dao;
+
+import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.Meal;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDaoImpl implements OrderDao {
 
-    private List<Order> orderList;
+    private List<OrderR> orderList;
 
     public OrderDaoImpl() {
         orderList = new ArrayList<>();
     }
 
     @Override
-    public List<Order> getAllOrders() {
+    public List<OrderR> getAllOrders() {
         return orderList;
     }
 
     @Override
-    public void addOrder(Order order) {
+    public void addOrder(OrderR order) {
         orderList.add(order);
     }
 
     @Override
-    public void removeOrder(Order order) {
-        for (Order order1 : orderList) {
+    public void removeOrder(OrderR order) {
+        for (OrderR order1 : orderList) {
             if (order1.equals(order)){
                 orderList.remove(order);
                 break;
@@ -32,14 +34,14 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
-    public void addMealToOrder(Order order, Meal meal) {
+    public void addMealToOrder(OrderR order, Meal meal) {
         List<Meal> ourMeals = order.getMealList();
         ourMeals.add(meal);
         order.setMealList(ourMeals);
     }
 
     @Override
-    public void removeMealFromOrder(Order order, Meal meal) {
+    public void removeMealFromOrder(OrderR order, Meal meal) {
         List<Meal> ourMeals = order.getMealList();
         for (Meal ourMeal : ourMeals) {
             if (meal.equals(ourMeal)){
@@ -51,7 +53,7 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
-    public boolean checkIfMealAppearInOurOrder(Order order, Meal meal){
+    public boolean checkIfMealAppearInOurOrder(OrderR order, Meal meal){
         for (Meal meal1 : order.getMealList()) {
             if (meal1.equals(meal)){
                 return true;

@@ -1,5 +1,7 @@
 package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
 
+import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.dao.OrderR;
+
 import java.util.List;
 
 public class Restaurant {
@@ -15,9 +17,9 @@ public class Restaurant {
         return false;
     }
 
-    public int calculateOrderPrice(Order order){
+    public int calculateOrderPrice(OrderR orderR){
         int sum = 0;
-        for (Meal meal : order.getMealList()) {
+        for (Meal meal : orderR.getMealList()) {
             sum+=meal.getPrice();
         }
         return sum;
