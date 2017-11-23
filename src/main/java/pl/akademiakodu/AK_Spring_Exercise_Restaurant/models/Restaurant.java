@@ -10,7 +10,7 @@ public class Restaurant {
 
     public boolean checkIfMealExist(String mealName){
         for (Meal meal : menu) {
-            if (mealName.toLowerCase().equals(meal.getName().toLowerCase())){
+            if (mealName.equals(meal.getName())){
                 return true;
             }
         }
