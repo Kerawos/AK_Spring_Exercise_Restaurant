@@ -1,15 +1,22 @@
-package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.dao;
+package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
 
-import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.Meal;
-
+/**
+ * Class for holding results as object.
+ */
 import java.util.ArrayList;
 import java.util.List;
 
 public class OrderR {
 
+    /**
+     * Variables declarations
+     */
     private String orderOwner;
     private List<Meal> mealList;
 
+    /**
+     * Constructors
+     */
     public OrderR() {
         mealList = new ArrayList<>();
     }
@@ -19,6 +26,9 @@ public class OrderR {
         this.mealList = mealList;
     }
 
+    /**
+     * Getters and setters section
+     */
     public String getOrderOwner() {
         return orderOwner;
     }
@@ -34,8 +44,5 @@ public class OrderR {
     public void setMealList(List<Meal> mealList) {
         this.mealList = mealList;
     }
-
-
-
 
 }

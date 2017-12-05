@@ -1,15 +1,21 @@
 package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
 
+/**
+ * Imports section
+ */
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.dao.OrderR;
+import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.services.Restaurant;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * Class responsible for testing restaurant logic
+ */
 public class RestaurantTest {
 
     private static Restaurant restaurant;
@@ -22,6 +28,10 @@ public class RestaurantTest {
         restaurant = null;
     }
 
+    /**
+     * Method to test restaurant methods
+     * @throws Exception in case of user input error
+     */
     @Test public void restaurantTests() throws Exception {
         assertNotNull(restaurant.getMenu());
         assertTrue(restaurant.checkIfMealExist("Pizza"));

@@ -1,10 +1,19 @@
 package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
 
+/**
+ * Class for holding meals as object.
+ */
 public class Meal {
 
+    /**
+     * Variables declarations
+     */
     private String name;
     private int price;
 
+    /**
+     * Constructors
+     */
     public Meal() {
     }
 
@@ -13,6 +22,9 @@ public class Meal {
         this.price = price;
     }
 
+    /**
+     * Getters and setters section
+     */
     public String getName() {
         return name;
     }

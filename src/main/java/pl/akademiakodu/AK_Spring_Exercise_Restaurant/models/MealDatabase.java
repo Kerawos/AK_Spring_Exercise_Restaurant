@@ -1,10 +1,20 @@
 package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
 
+/**
+ * Imports section
+ */
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class will be data storage for all meals in this exercise
+ */
 public class MealDatabase {
 
+    /**
+     * Method responsible fot calling all available meals in this exercise
+     * @return
+     */
     public List<Meal> getMeals(){
         List<Meal> mealList = new ArrayList<>();
         mealList.add(new Meal("Spagetti", 14));

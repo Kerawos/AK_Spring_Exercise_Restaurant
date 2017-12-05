@@ -1,9 +1,13 @@
-package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.dao;
+package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.services.dao;
 
+/**
+ * Imports section
+ */
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.Meal;
+import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.OrderR;
 
 import static org.junit.Assert.*;
 
@@ -19,8 +23,11 @@ public class OrderDaoImplTest {
         orderDao = null;
     }
 
-    @Test
-    public void name() throws Exception {
+    /**
+     * Method tests order method
+     * @throws Exception in case of user input error
+     */
+    @Test public void testOrder() throws Exception {
         assertNotNull(orderDao.getAllOrders());
         assertEquals(orderDao.getAllOrders().size(), 0);
         OrderR newOrder = new OrderR();

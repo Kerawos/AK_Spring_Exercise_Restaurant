@@ -1,10 +1,19 @@
 package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
 
+/**
+ * Class for holding user request object
+ */
 public class UserRequest {
 
+    /**
+     * Variables declarations
+     */
     private String name;
     private String mealName;
 
+    /**
+     * Constructors
+     */
     public UserRequest() {
     }
 
@@ -13,6 +22,9 @@ public class UserRequest {
         this.mealName = mealName;
     }
 
+    /**
+     * Getters and setters section
+     */
     public String getName() {
         return name;
     }
