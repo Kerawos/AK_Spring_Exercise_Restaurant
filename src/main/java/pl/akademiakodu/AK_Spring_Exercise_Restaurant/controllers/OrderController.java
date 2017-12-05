@@ -91,7 +91,7 @@ public class OrderController {
     }
 
     /**
-     * Method responsible for send request to service about calculating total order cost and time..
+     * Method responsible for send request to service about calculating total order cost and time. .
      * @param userRequest stored user inputs as order request
      * @param model holding calculations
      * @return update order template

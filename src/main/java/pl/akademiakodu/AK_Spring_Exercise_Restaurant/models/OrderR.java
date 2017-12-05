@@ -1,11 +1,14 @@
 package pl.akademiakodu.AK_Spring_Exercise_Restaurant.models;
 
 /**
- * Class for holding results as object.
+ * Imports section
  */
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class for holding results as object.
+ */
 public class OrderR {
 
     /**

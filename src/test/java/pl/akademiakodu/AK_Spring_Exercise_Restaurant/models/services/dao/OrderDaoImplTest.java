@@ -11,6 +11,9 @@ import pl.akademiakodu.AK_Spring_Exercise_Restaurant.models.OrderR;
 
 import static org.junit.Assert.*;
 
+/**
+ * Class responsible for testing order logic
+ */
 public class OrderDaoImplTest {
 
     private static OrderDaoImpl orderDao;
